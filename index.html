@@ -4,20 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>welcome to weirdsplash</title>
+    <title>Welcome to Weirdsplash</title>
     <style>
         body {
-            background-color: #333; /* Dark background */
-            color: #fff; /* White text */
+            background-color: #333;
+            /* Dark background */
+            color: #fff;
+            /* White text */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            animation: shake 1s infinite;
         }
         
         header {
-            background-color: #7f00ff; /* Weird purple */
+            background-color: #7f00ff;
+            /* Weird purple */
             padding: 20px;
             text-align: center;
+            animation: slideIn 1s ease infinite alternate;
         }
         
         h1 {
@@ -29,22 +34,26 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 0 20px;
+            animation: rotate 10s linear infinite;
         }
         
         p {
             font-size: 1.2em;
             line-height: 1.5;
+            animation: bounce 3s infinite alternate;
         }
         
         footer {
-            background-color: #ff7f00; /* Weird orange */
+            background-color: #ff7f00;
+            /* Weird orange */
             padding: 20px;
             text-align: center;
             position: fixed;
             bottom: 0;
             width: 100%;
+            animation: pulse 2s infinite alternate;
         }
-
+        
         .surreal-img {
             max-width: 100%;
             height: auto;
@@ -52,35 +61,86 @@
             margin: 20px auto;
             filter: grayscale(100%);
             transition: filter 0.5s ease;
+            animation: spin 10s linear infinite;
         }
-
+        
         .surreal-img:hover {
             filter: none;
         }
-
+        
         @keyframes slideIn {
             from {
-                transform: translateY(-100%);
+                transform: translateY(-10px);
             }
             to {
-                transform: translateY(0);
+                transform: translateY(10px);
             }
         }
-
-        .animated-text {
-            animation: slideIn 1s ease;
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes shake {
+            0% {
+                transform: translateX(-2px);
+            }
+            50% {
+                transform: translateX(2px);
+            }
+            100% {
+                transform: translateX(-2px);
+            }
+        }
+        
+        @keyframes bounce {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>welcome to weirdsplash</h1>
+        <h1>Welcome to Weirdsplash</h1>
     </header>
 
     <div class="container">
-        <p class="animated-text">refresh to view a new image</p>
-        <img src="https://source.unsplash.com/random/800x601" alt="Surreal Image 2" class="surreal-img">
+        <p>Refresh to view a new image</p>
+        <img src="https://source.unsplash.com/random/800x601" alt="Surreal Image" class="surreal-img">
     </div>
 
     <footer>
