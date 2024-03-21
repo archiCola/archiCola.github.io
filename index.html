@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Weirdsplash.</title>
+    <style>
+        body {
+            background-color: #333; /* Dark background */
+            color: #fff; /* White text */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #7f00ff; /* Weird purple */
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        
+        footer {
+            background-color: #ff7f00; /* Weird orange */
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .surreal-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+        }
+
+        .surreal-img:hover {
+            filter: none;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .animated-text {
+            animation: slideIn 1s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>welcome to unsplash</h1>
+    </header>
+
+    <div class="container">
+        <p class="animated-text">This is a site that will show you random images.</p>
+        <img src="https://source.unsplash.com/random/800x601" alt="Surreal Image 2" class="surreal-img">
+    </div>
+
+    <footer>
+        <p>© 2024 Weirdsplash. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
